@@ -81,20 +81,16 @@ nav.scrolled{border-bottom-color:var(--line)}
 
 /* ── HERO ── */
 .hero{padding:160px 0 100px;position:relative;overflow:hidden}
-
-/* dot-grid background */
 .hero::before{
   content:"";position:absolute;inset:0;z-index:0;
   background-image:radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size:32px 32px;
   mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }
-/* orange glow top-right */
 .hero-glow{position:absolute;top:-15%;right:-8%;z-index:0;
   width:56vw;height:56vw;max-width:720px;max-height:720px;
   background:radial-gradient(circle, rgba(232,112,64,0.13) 0%, transparent 65%);
   pointer-events:none}
-/* amber glow bottom-left */
 .hero-glow2{position:absolute;bottom:-10%;left:-5%;z-index:0;
   width:40vw;height:40vw;max-width:500px;
   background:radial-gradient(circle, rgba(232,163,23,0.06) 0%, transparent 65%);
@@ -116,7 +112,6 @@ nav.scrolled{border-bottom-color:var(--line)}
 .hero-fine{font-size:14px;color:var(--ink-3)}
 .hero-fine b{color:var(--ink-2);font-weight:500}
 
-/* Terminal block */
 .terminal{margin-top:64px;background:var(--bg-2);border:1px solid var(--line-2);
   border-radius:14px;overflow:hidden;max-width:640px}
 .term-bar{background:var(--bg-3);padding:12px 18px;display:flex;
@@ -138,8 +133,7 @@ nav.scrolled{border-bottom-color:var(--line)}
 /* ── STATS ── */
 .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   padding:52px 0;margin:0}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-  divide:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .stat{padding:0 40px;border-right:1px solid var(--line);text-align:center}
 .stat:last-child{border-right:none}
 .stat .num{font-family:'Archivo';font-size:clamp(36px,4vw,56px);font-weight:900;
@@ -295,6 +289,87 @@ section{position:relative}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
 .faq-a p{color:var(--ink-2);font-size:16px;padding:0 0 22px;max-width:66ch;line-height:1.7}
 
+/* ── CAPTURA MAILERLITE ── */
+.captura-section{
+  background:var(--bg-2);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:80px 0;
+}
+.captura-inner{
+  max-width:560px;
+  margin:0 auto;
+  text-align:center;
+}
+.captura-inner .eyebrow{justify-content:center;margin-bottom:20px}
+.captura-inner h2{
+  font-size:clamp(26px,3.5vw,40px);
+  font-weight:800;
+  margin-bottom:14px;
+  letter-spacing:-0.02em;
+}
+.captura-inner p{
+  color:var(--ink-2);
+  font-size:16px;
+  line-height:1.7;
+  margin-bottom:36px;
+}
+/* Override MailerLite styles para combinar com o site */
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedWrapper{
+  background-color: transparent !important;
+  border: none !important;
+  width: 100% !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedWrapper.embedDefault,
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedWrapper.embedForm{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedBody .ml-form-embedContent{
+  display: none !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedBody .ml-form-fieldRow input{
+  background-color: var(--bg-3) !important;
+  color: var(--ink) !important;
+  border-color: var(--line-2) !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  padding: 14px 16px !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedBody .ml-form-fieldRow input::placeholder{
+  color: var(--ink-3) !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedBody .ml-form-embedSubmit button{
+  background-color: var(--amber) !important;
+  color: #1A0A04 !important;
+  font-family: 'Archivo', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 14px !important;
+  transition: opacity .2s !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-embedBody .ml-form-embedSubmit button:hover{
+  background-color: #c98a0f !important;
+  opacity: .9 !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-successBody .ml-form-successContent h4{
+  color: var(--ink) !important;
+  font-family: 'Archivo', sans-serif !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-successBody .ml-form-successContent p{
+  color: var(--ink-2) !important;
+}
+#mlb2-43099888.ml-form-embedContainer .ml-form-successBody .ml-form-successContent p a{
+  color: var(--amber) !important;
+}
+.captura-fine{
+  margin-top:16px;
+  font-size:13px;
+  color:var(--ink-3);
+}
+
 /* ── FINAL CTA ── */
 .final-cta{text-align:center;padding:120px 0}
 .final-cta h2{font-size:clamp(28px,4.8vw,58px);font-weight:900;
@@ -349,23 +424,17 @@ footer .logo em{font-style:normal;color:var(--orange)}
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="wrap hero-in">
-
     <div class="hero-badge">
       <span class="dot"></span>
       <span class="mono">turma de fundadores · vagas abertas</span>
     </div>
-
     <h1>IA prática para <span class="orange">profissionais</span>. <span class="dim">Sem enrolação.</span></h1>
-
     <p class="sub">Aprenda a usar o Claude e o Gemini no seu trabalho com aulas específicas para a sua profissão — e recupere até 10 horas por semana.</p>
-
     <div class="hero-actions">
       <a href="#oferta" class="btn btn-primary">50% OFF — Assinar por R$47/mês</a>
       <a href="#como" class="btn btn-ghost">Ver como funciona</a>
     </div>
     <p class="hero-fine">De <b>R$97</b> por <b>R$47/mês</b> · Mais de 50% OFF · Cancele quando quiser</p>
-
-    <!-- Terminal animado -->
     <div class="terminal">
       <div class="term-bar">
         <div class="term-dot"></div>
@@ -379,7 +448,6 @@ footer .logo em{font-style:normal;color:var(--orange)}
         <div><span class="term-prompt">IA →</span> <span class="term-ai" id="typewriter"></span><span class="term-cursor"></span></div>
       </div>
     </div>
-
   </div>
 </header>
 
@@ -387,22 +455,10 @@ footer .logo em{font-style:normal;color:var(--orange)}
 <div class="stats">
   <div class="wrap">
     <div class="stats-grid">
-      <div class="stat reveal">
-        <div class="num">78</div>
-        <div class="lbl">aulas práticas</div>
-      </div>
-      <div class="stat reveal">
-        <div class="num">70</div>
-        <div class="lbl">Skills prontas para usar</div>
-      </div>
-      <div class="stat reveal">
-        <div class="num">10</div>
-        <div class="lbl">trilhas por profissão</div>
-      </div>
-      <div class="stat reveal">
-        <div class="num">10h</div>
-        <div class="lbl">por semana de volta pra você</div>
-      </div>
+      <div class="stat reveal"><div class="num">78</div><div class="lbl">aulas práticas</div></div>
+      <div class="stat reveal"><div class="num">70</div><div class="lbl">Skills prontas para usar</div></div>
+      <div class="stat reveal"><div class="num">10</div><div class="lbl">trilhas por profissão</div></div>
+      <div class="stat reveal"><div class="num">10h</div><div class="lbl">por semana de volta pra você</div></div>
     </div>
   </div>
 </div>
@@ -491,21 +547,9 @@ footer .logo em{font-style:normal;color:var(--orange)}
       <p>O EvolIA foi desenhado para quem está começando. Você avança por camadas, no seu ritmo — cada etapa já gera resultado no trabalho.</p>
     </div>
     <div class="steps">
-      <div class="step reveal">
-        <div class="num">// CAMADA 01</div>
-        <h3>Fundamentos</h3>
-        <p>Configure tudo, aprenda a "conversar" com a IA e use com segurança. A base que todo mundo precisa — em menos de uma hora.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">// CAMADA 02</div>
-        <h3>Uso no dia a dia</h3>
-        <p>E-mails, reuniões, documentos e planilhas. Aqui você já sente a diferença concreta na sua semana de trabalho.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">// CAMADA 03</div>
-        <h3>Trilhas por profissão</h3>
-        <p>7 aulas e 7 Skills específicas para a sua área. Você aprende com as dores reais do seu trabalho.</p>
-      </div>
+      <div class="step reveal"><div class="num">// CAMADA 01</div><h3>Fundamentos</h3><p>Configure tudo, aprenda a "conversar" com a IA e use com segurança. A base que todo mundo precisa — em menos de uma hora.</p></div>
+      <div class="step reveal"><div class="num">// CAMADA 02</div><h3>Uso no dia a dia</h3><p>E-mails, reuniões, documentos e planilhas. Aqui você já sente a diferença concreta na sua semana de trabalho.</p></div>
+      <div class="step reveal"><div class="num">// CAMADA 03</div><h3>Trilhas por profissão</h3><p>7 aulas e 7 Skills específicas para a sua área. Você aprende com as dores reais do seu trabalho.</p></div>
     </div>
   </div>
 </section>
@@ -518,16 +562,8 @@ footer .logo em{font-style:normal;color:var(--orange)}
       <p>Porque cada uma é melhor em coisas diferentes — e juntas cobrem quase tudo que você precisa. No EvolIA, você aprende exatamente quando usar cada uma.</p>
     </div>
     <div class="tools">
-      <div class="tool reveal">
-        <div class="tool-badge"><span>Google Gemini</span></div>
-        <h3>O ajudante dentro do Google</h3>
-        <p>Imbatível no dia a dia: planilhas, documentos, e-mails e imagens — integrado a tudo que você já usa no trabalho.</p>
-      </div>
-      <div class="tool reveal">
-        <div class="tool-badge"><span>Claude</span></div>
-        <h3>O especialista em raciocínio</h3>
-        <p>Excepcional para ler documentos longos, analisar e executar tarefas complexas — e é a base das suas Skills personalizadas.</p>
-      </div>
+      <div class="tool reveal"><div class="tool-badge"><span>Google Gemini</span></div><h3>O ajudante dentro do Google</h3><p>Imbatível no dia a dia: planilhas, documentos, e-mails e imagens — integrado a tudo que você já usa no trabalho.</p></div>
+      <div class="tool reveal"><div class="tool-badge"><span>Claude</span></div><h3>O especialista em raciocínio</h3><p>Excepcional para ler documentos longos, analisar e executar tarefas complexas — e é a base das suas Skills personalizadas.</p></div>
     </div>
   </div>
 </section>
@@ -540,86 +576,16 @@ footer .logo em{font-style:normal;color:var(--orange)}
       <p>Cada trilha tem 7 aulas e 7 Skills feitas para as dores reais daquela profissão. Você acessa todas com uma assinatura.</p>
     </div>
     <div class="trilhas">
-      <div class="trilha reveal">
-        <div class="emoji">🧑‍💼</div>
-        <div class="trilha-info">
-          <b>Recursos Humanos</b>
-          <span>Triagem, vagas, entrevistas e comunicação interna</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">📊</div>
-        <div class="trilha-info">
-          <b>Contabilidade</b>
-          <span>Comunicação com cliente, documentos e conteúdo</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">⚖️</div>
-        <div class="trilha-info">
-          <b>Direito</b>
-          <span>Peças, resumo de processos e tradução jurídica</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">📱</div>
-        <div class="trilha-info">
-          <b>Marketing e Social Media</b>
-          <span>Pauta, legendas, roteiros e campanhas</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">🏠</div>
-        <div class="trilha-info">
-          <b>Corretor de Imóveis</b>
-          <span>Descrições, anúncios e follow-up de leads</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">💼</div>
-        <div class="trilha-info">
-          <b>Vendas</b>
-          <span>Prospecção, proposta, objeções e funil</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">🍎</div>
-        <div class="trilha-info">
-          <b>Educação</b>
-          <span>Planos de aula, atividades e comunicação escolar</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">🛒</div>
-        <div class="trilha-info">
-          <b>Pequeno Empreendedor</b>
-          <span>Atendimento, divulgação e organização do negócio</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">🗂️</div>
-        <div class="trilha-info">
-          <b>Administração e Secretariado</b>
-          <span>E-mails, agenda, atas e documentos</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
-      <div class="trilha reveal">
-        <div class="emoji">🩺</div>
-        <div class="trilha-info">
-          <b>Saúde</b>
-          <span>Prontuário, comunicação com paciente e conteúdo</span>
-          <div class="badge-skill">7 Skills</div>
-        </div>
-      </div>
+      <div class="trilha reveal"><div class="emoji">🧑‍💼</div><div class="trilha-info"><b>Recursos Humanos</b><span>Triagem, vagas, entrevistas e comunicação interna</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">📊</div><div class="trilha-info"><b>Contabilidade</b><span>Comunicação com cliente, documentos e conteúdo</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">⚖️</div><div class="trilha-info"><b>Direito</b><span>Peças, resumo de processos e tradução jurídica</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">📱</div><div class="trilha-info"><b>Marketing e Social Media</b><span>Pauta, legendas, roteiros e campanhas</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">🏠</div><div class="trilha-info"><b>Corretor de Imóveis</b><span>Descrições, anúncios e follow-up de leads</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">💼</div><div class="trilha-info"><b>Vendas</b><span>Prospecção, proposta, objeções e funil</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">🍎</div><div class="trilha-info"><b>Educação</b><span>Planos de aula, atividades e comunicação escolar</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">🛒</div><div class="trilha-info"><b>Pequeno Empreendedor</b><span>Atendimento, divulgação e organização do negócio</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">🗂️</div><div class="trilha-info"><b>Administração e Secretariado</b><span>E-mails, agenda, atas e documentos</span><div class="badge-skill">7 Skills</div></div></div>
+      <div class="trilha reveal"><div class="emoji">🩺</div><div class="trilha-info"><b>Saúde</b><span>Prontuário, comunicação com paciente e conteúdo</span><div class="badge-skill">7 Skills</div></div></div>
     </div>
   </div>
 </section>
@@ -632,16 +598,11 @@ footer .logo em{font-style:normal;color:var(--orange)}
       <p>Para qualquer profissional que usa o computador para trabalhar e quer ganhar tempo.</p>
     </div>
     <div class="chips reveal">
-      <div class="chip">RH e Recrutamento</div>
-      <div class="chip">Advogados</div>
-      <div class="chip">Contadores</div>
-      <div class="chip">Marketing e Social Media</div>
-      <div class="chip">Corretores</div>
-      <div class="chip">Vendedores</div>
-      <div class="chip">Professores</div>
-      <div class="chip">Empreendedores</div>
-      <div class="chip">Assistentes Administrativos</div>
-      <div class="chip">Profissionais de Saúde</div>
+      <div class="chip">RH e Recrutamento</div><div class="chip">Advogados</div>
+      <div class="chip">Contadores</div><div class="chip">Marketing e Social Media</div>
+      <div class="chip">Corretores</div><div class="chip">Vendedores</div>
+      <div class="chip">Professores</div><div class="chip">Empreendedores</div>
+      <div class="chip">Assistentes Administrativos</div><div class="chip">Profissionais de Saúde</div>
     </div>
     <p class="aud-close reveal">Se você sabe abrir o navegador e digitar, você consegue. <span class="orange">O curso começa do absoluto zero.</span></p>
   </div>
@@ -723,6 +684,63 @@ footer .logo em{font-style:normal;color:var(--orange)}
   </div>
 </section>
 
+<!-- CAPTURA MAILERLITE -->
+<section class="captura-section">
+  <div class="wrap">
+    <div class="captura-inner reveal">
+      <span class="eyebrow">Ainda na dúvida?</span>
+      <h2>Receba conteúdo gratuito sobre IA no trabalho</h2>
+      <p>Antes de decidir, entre na nossa lista e receba dicas práticas de como profissionais estão usando IA no dia a dia — de graça, sem compromisso.</p>
+
+      <!-- MailerLite Universal -->
+      <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n)})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2473298');
+      </script>
+      <!-- End MailerLite Universal -->
+
+      <div id="mlb2-43099888" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-43099888">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper embedForm">
+            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+              <div class="ml-form-embedContent" style="display:none"></div>
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2473298/forms/191362939261814089/subscribe" data-code="" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Seu melhor e-mail" autocomplete="email">
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Quero receber conteúdo gratuito →</button>
+                  <button disabled="disabled" style="display:none;" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+            <div class="ml-form-successBody row-success" style="display:none">
+              <div class="ml-form-successContent">
+                <h4>Cadastro feito! 🎉</h4>
+                <p>Clique abaixo para acessar o EvolIA agora:<br><a href="https://go.hotmart.com/O106352832O">https://go.hotmart.com/O106352832O</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="captura-fine">Sem spam. Cancele quando quiser.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section style="background:linear-gradient(160deg,var(--black) 0%,rgba(232,112,64,0.05) 100%);border-top:1px solid var(--line)">
   <div class="wrap final-cta">
@@ -743,17 +761,20 @@ footer .logo em{font-style:normal;color:var(--orange)}
 </footer>
 
 <script>
-// Nav scroll
+function ml_webform_success_43099888(){
+  var $=ml_jQuery||jQuery;
+  $('.ml-subscribe-form-43099888 .row-success').show();
+  $('.ml-subscribe-form-43099888 .row-form').hide();
+}
+
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
 
-// Reveal on scroll
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-// Typewriter no terminal
 const lines=[
   "Proposta Comercial — Café Central",
   "",
@@ -770,19 +791,11 @@ const el=document.getElementById('typewriter');
 function type(){
   if(li>=lines.length)return;
   const line=lines[li];
-  if(ci<line.length){
-    out+=line[ci];ci++;
-    el.textContent=out;
-    setTimeout(type,28);
-  }else{
-    out+="\n";ci=0;li++;
-    el.textContent=out;
-    setTimeout(type,li<lines.length?180:0);
-  }
+  if(ci<line.length){out+=line[ci];ci++;el.textContent=out;setTimeout(type,28);}
+  else{out+="\n";ci=0;li++;el.textContent=out;setTimeout(type,li<lines.length?180:0);}
 }
 setTimeout(type,1200);
 
-// FAQ
 document.querySelectorAll('.faq-q').forEach(q=>{
   q.addEventListener('click',()=>{
     const item=q.parentElement;
